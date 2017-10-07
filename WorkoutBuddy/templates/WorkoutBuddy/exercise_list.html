@@ -1,0 +1,12 @@
+{% block content %}
+    <h2> Exercises </h2>
+    <ul>
+        {% for exercise in exercise_list %}
+            <li>
+                <a href="{% url 'WorkoutBuddy:exercise_description' exercise.id %}">
+                    {{exercise.exercise_name}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

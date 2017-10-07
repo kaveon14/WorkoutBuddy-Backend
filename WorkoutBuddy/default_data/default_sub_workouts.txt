@@ -1,0 +1,118 @@
+Chest Day
+Bench Press
+3
+6-10
+Incline Dumbbell Press
+3
+8-12
+Cable Crossover
+3
+8-12
+Chest Press Machine
+3
+8-12
+Ab Crunch
+3
+8-12
+Lying Leg Raise
+3
+8-12
+Russian Twist
+3
+8-12
+@//
+Back Day
+Dead-lift
+4
+3-5
+Pull ups
+3
+8-12
+Barbell Row
+3
+8-12
+Dumbbell Row
+3
+8-12
+Wide Grip Lat Pull-down
+3
+8-12
+Shrugs
+3
+8-12
+@//
+Shoulder Day
+Dumbbell Shoulder Press
+4
+6-10
+Arnold Press
+3
+8-12
+Side Lateral Raise
+3
+8-12
+Hanging Leg Raise
+3
+8-12
+Cable Crunch
+3
+8-12
+Exercise Bike
+1
+10-30mins
+@//
+Leg Day
+Squat
+4
+6-10
+Leg Press
+3
+8-12
+Front Squat
+3
+8-12
+Leg Extensions
+3
+8-12
+Straight Leg Dead-lift
+3
+8-12
+Seated Leg Curl
+3
+8-12
+Standing Calf Raises
+4
+12-20
+Seated Calf Raises
+4
+12-20
+@//
+Arm Day
+Close Grip Bench Press
+4
+6-10
+Triceps Push-downs
+3
+8-12
+Dumbbell Kick-Backs
+3
+8-12
+EZ Bar Curl
+3
+8-12
+Dumbbell Curl
+3
+8-12
+Preacher Curl
+3
+8-12
+Ab Crunch
+3
+8-12
+Lying Leg Raise
+3
+8-12
+Russian Twist
+3
+8-12
+@//

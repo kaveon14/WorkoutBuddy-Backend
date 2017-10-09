@@ -91,6 +91,13 @@ class CustomExerciseImage(models.Model):
     exercise = models.OneToOneField(CustomExercise, on_delete=models.CASCADE)
     exercise_image = models.ImageField(upload_to=user_directory_exercise_image_path)#define image path user/custom_exercise_images/
 
+class ExerciseGoals(models.Model):
+    SET_CHOICES = zip(range(1, 16), range(1, 16))
+    goal_sets = models.IntegerField(default=1,choices=SET_CHOICES)
+    goal_reps = models.CharField(max_length=10)
+    default_exercise = models.ForeignKey(DefaultExercise,null=True)
+    custom_exercise = models.ForeignKey(CustomExercise,null=True)
+
 class ProfileImage(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile, null=True)
@@ -113,7 +120,7 @@ class SubWorkout(models.Model):
     sub_workout_name = models.CharField(max_length=100,help_text="Enter a name for your SubWorkout")
     default_exercises = models.ManyToManyField(DefaultExercise)#these should be workout exercises with reps,sets,ad weight
     custom_exercises = models.ManyToManyField(CustomExercise)
-#think more about thi
+
 class Set(models.Model):
     workout_exercise = models.ForeignKey('WorkoutExercise')
     SET_CHOICES = zip(range(1, 16), range(1, 16))

@@ -1,8 +1,8 @@
 from django.core.management.base import BaseCommand
-from WorkoutBuddy.models import DefaultExercise,MainWorkout,SubWorkout
+from WorkoutBuddy.models import DefaultExercise,MainWorkout,SubWorkout,ExerciseGoals
 
 
-
+'''Need to add sets and reps to sub workouts'''
 class Command(BaseCommand):
     args = 'None'
     help = 'Help string test'
@@ -82,9 +82,9 @@ class Command(BaseCommand):
                 ex_sets = file_lines[i + 1]
                 ex_reps = file_lines[i + 2]
                 exercise = DefaultExercise.objects.get(exercise_name=ex_name)
-                exercise.goal_reps = ex_reps
-                exercise.goal_sets = ex_sets
-                exercise.save()
+                exercise_goals = ExerciseGoals(default_exercise=exercise,goal_reps=ex_reps.strip())
+                exercise_goals.goal_sets = ex_sets
+                exercise_goals.save()
                 sub_workout.default_exercises.add(exercise)
                 i += 3
         main_workout.save()

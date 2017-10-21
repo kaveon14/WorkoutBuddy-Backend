@@ -25,8 +25,7 @@ SECRET_KEY = '-!4vt9lbrp8gq%19y%!tjq9w22hlse!_!yq_#4)!cp#()!palf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['10.100.137.238','0.0.0.0','192.168.0.15','127.0.0.1','localhost:8000','localhost']
 
 # Application definition
 
@@ -49,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'WorkoutBuddySite.urls'
 

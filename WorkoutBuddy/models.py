@@ -14,10 +14,23 @@ def user_directory_progress_photo__path(instance, filename):
 def user_directory_exercise_image_path(instance, filename):
     d = 'CustomExerciseImages/' + filename
     return 'user_{0}/{1}'.format(instance.user.id, d)
+#use these in a view or template
+def user_local_directory_profile_image_path(filename):
+    path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/ProfileImage/'
+    return path + filename
+
+def user_local_directory_progress_photo_path(filename):
+    path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/ProgressPhotos/'
+    return path + filename
+
+def user_local_directory_exercise_image_path(filename):
+    path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/CustomExerciseImages/'
+    return path + filename
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
-    profile_picture = models.ImageField(upload_to=user_directory_profile_image)
+    profile_picture = models.ImageField(upload_to=user_directory_profile_image,null=True)
+    local_profile_picture = models.ImageField(null=True)
 
     max_bench = models.OneToOneField('MaxBench',null=True)
     max_squat = models.OneToOneField('MaxSquat',null=True)
@@ -29,6 +42,9 @@ class Profile(models.Model):
     custom_exercises = models.ManyToManyField('CustomExercise')
     progress_photos = models.ManyToManyField('ProgressPhoto')
     workout_stats = models.ManyToManyField('Workout')
+
+    def __str__(self):
+        return self.user.username
 
 
 class MaxSquat(models.Model):
@@ -79,7 +95,7 @@ class Body(models.Model):
 class DefaultExercise(models.Model):
     exercise_name = models.CharField(max_length=100)
     exercise_description = models.TextField(max_length=2000)
-    exercise_image = models.ImageField()
+    exercise_image = models.ImageField(null=True)
 
 class CustomExercise(models.Model):
     user_profile = models.ForeignKey(Profile,null=True)
@@ -89,7 +105,8 @@ class CustomExercise(models.Model):
 class CustomExerciseImage(models.Model):
     user = User
     exercise = models.OneToOneField(CustomExercise, on_delete=models.CASCADE)
-    exercise_image = models.ImageField(upload_to=user_directory_exercise_image_path)#define image path user/custom_exercise_images/
+    exercise_image = models.ImageField(upload_to=user_directory_exercise_image_path,null=True)#define image path user/custom_exercise_images/
+    local_exercise_image = models.ImageField(null=True)
 
 class ExerciseGoals(models.Model):
     SET_CHOICES = zip(range(1, 16), range(1, 16))
@@ -102,11 +119,13 @@ class ProfileImage(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile, null=True)
     profile_image = models.ImageField(upload_to=user_directory_profile_image)#define user/profile_image/
+    local_profile_image = models.ImageField(null=True)
     date = models.DateField(help_text="MM-DD-YYYY")
 
 class ProgressPhoto(models.Model):
     user = User
     photo = models.ImageField(upload_to=user_directory_profile_image)
+    local_photo = models.ImageField(null=True)
     date_time = models.DateTimeField(help_text="MM-DD-YYYY HH:MM:SS")
 
 class MainWorkout(models.Model):

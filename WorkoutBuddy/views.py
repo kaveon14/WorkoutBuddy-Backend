@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise
+from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise
 from django.views import generic
 # Create your views here.
 
@@ -23,3 +23,8 @@ class CreateSubWorkout(generic.CreateView):
     template_name = 'WorkoutBuddy/create_subworkout.html'
     model = SubWorkout
     fields = ['main_workout','sub_workout_name']
+
+class CreateExercise(generic.CreateView):
+    template_name = 'WorkoutBuddy/create_exercise.html'
+    model = CustomExercise
+    fields = ['user_profile','exercise_name','exercise_description']

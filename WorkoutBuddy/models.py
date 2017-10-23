@@ -114,6 +114,7 @@ class ExerciseGoals(models.Model):
     goal_reps = models.CharField(max_length=10)
     default_exercise = models.ForeignKey(DefaultExercise,null=True)
     custom_exercise = models.ForeignKey(CustomExercise,null=True)
+    sub_workout = models.ForeignKey('SubWorkout',on_delete=models.CASCADE,null=True);
 
 class ProfileImage(models.Model):
     user = User

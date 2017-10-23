@@ -52,11 +52,11 @@ class Command(BaseCommand):
             exercise.save()
 
 
-    def create_default_main_workout(self):#think about this model
+    def create_default_main_workout(self):
         main_workout = MainWorkout(main_workout_name='Default Workouts')
         main_workout.save()
 
-    def create_default_sub_workouts(self):#think about this model
+    def create_default_sub_workouts(self):#need to also set sub workout id for the data added
         main_workout = MainWorkout(main_workout_name='Default Workouts')
         main_workout.save()
 
@@ -82,7 +82,8 @@ class Command(BaseCommand):
                 ex_sets = file_lines[i + 1]
                 ex_reps = file_lines[i + 2]
                 exercise = DefaultExercise.objects.get(exercise_name=ex_name)
-                exercise_goals = ExerciseGoals(default_exercise=exercise,goal_reps=ex_reps.strip())
+                sub = SubWorkout.objects.get(sub_workout_name=sub_name)
+                exercise_goals = ExerciseGoals(default_exercise=exercise,goal_reps=ex_reps.strip(),sub_workout=sub)
                 exercise_goals.goal_sets = ex_sets
                 exercise_goals.save()
                 sub_workout.default_exercises.add(exercise)

@@ -3,29 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="8fcbce64-6f92-4619-b526-455079731fba" name="Default" comment="">
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/GymBuddyV.2/app/src/main/java/com/example/kaveon14/gymbuddyv2/DataBase/DefaultData/ReadDefaultWorkoutFile" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/views.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/GameBoard.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/GameBoard.class" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/GameBoard.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/GameBoard.java" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile.class" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/.idea/workspace.xml" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/urls.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/models.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/views.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/.idea/workspace.xml" afterPath="$USER_HOME$/IdeaProjects/DSClass/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/settings.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/models.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/models.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/urls.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/urls.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/GameBoard.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/GameBoard.class" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile.class" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/GameBoard.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/GameBoard.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/.idea/workspace.xml" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WorkoutBuddy/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="113" column="47" lean-forward="true" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+            <state relative-caret-position="130">
+              <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <marker date="1508797187000" expanded="true" signature="4716:5041" ph="..." />
@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="populate_db.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="populate_db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="88" column="59" lean-forward="true" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+            <state relative-caret-position="31">
+              <caret line="50" column="80" lean-forward="false" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -180,6 +180,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,7 +249,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,15 +375,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18955651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35407725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7189781" sideWeight="0.5095314" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30361447" sideWeight="0.49205717" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7807229" sideWeight="0.49046862" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54306567" sideWeight="0.49046862" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -772,26 +773,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="50" column="80" lean-forward="false" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutBuddy/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="113" column="47" lean-forward="true" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+        <state relative-caret-position="130">
+          <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <marker date="1508797187000" expanded="true" signature="4716:5041" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="88" column="59" lean-forward="true" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>

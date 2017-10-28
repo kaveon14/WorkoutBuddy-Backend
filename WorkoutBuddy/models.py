@@ -125,6 +125,7 @@ class ProfileImage(models.Model):
 
 class ProgressPhoto(models.Model):
     user = User
+    user_profile = models.ForeignKey(Profile, null=True)
     photo = models.ImageField(upload_to=user_directory_profile_image)
     local_photo = models.ImageField(null=True)
     date_time = models.DateTimeField(help_text="MM-DD-YYYY HH:MM:SS")

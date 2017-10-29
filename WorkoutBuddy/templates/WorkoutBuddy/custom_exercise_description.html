@@ -1,0 +1,7 @@
+{% block content %}
+    <h2> {{exercise.exercise_name}}</h2>
+    <p> {{exercise.exercise_description}}</p>
+    <h3> {{exercise.exercise_image.url}}</h3>
+    {% load static %}
+    <img src="{{exercise.exercise_image.url}}" style="width:300px;height:270px"/>
+{% endblock %}

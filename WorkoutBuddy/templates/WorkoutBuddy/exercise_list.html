@@ -8,5 +8,12 @@
                 </a>
             </li>
         {% endfor %}
+        {% for custom_exercise in custom_exercise_list %}
+            <li>
+                <a href="{% url 'WorkoutBuddy:' exercise.id %}">
+                    {{custom_exercise.exercise_name}}
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 {% endblock %}

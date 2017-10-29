@@ -23,9 +23,7 @@ def user_local_directory_progress_photo_path(filename):
     path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/ProgressPhotos/'
     return path + filename
 
-def user_local_directory_exercise_image_path(filename):
-    path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/CustomExerciseImages/'
-    return path + filename
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
@@ -98,15 +96,17 @@ class DefaultExercise(models.Model):
     exercise_image = models.ImageField(null=True)
 
 class CustomExercise(models.Model):
+    user = User
     user_profile = models.ForeignKey(Profile,null=True)
     exercise_name = models.CharField(max_length=100)
     exercise_description = models.TextField(max_length=2000)
+    exercise_image = models.ImageField(upload_to=user_directory_exercise_image_path, null=True,
+                                       max_length=500)  # define image path user/custom_exercise_images/
+    local_exercise_image = models.ImageField(null=True, max_length=500)
 
-class CustomExerciseImage(models.Model):
-    user = User
-    exercise = models.OneToOneField(CustomExercise, on_delete=models.CASCADE)
-    exercise_image = models.ImageField(upload_to=user_directory_exercise_image_path,null=True)#define image path user/custom_exercise_images/
-    local_exercise_image = models.ImageField(null=True)
+    def user_local_directory_exercise_image_path(self,filename):
+        path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/CustomExerciseImages/'
+        return path + filename
 
 class ExerciseGoals(models.Model):
     SET_CHOICES = zip(range(1, 16), range(1, 16))

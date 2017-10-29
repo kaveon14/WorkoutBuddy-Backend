@@ -2,30 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fcbce64-6f92-4619-b526-455079731fba" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WorkoutBuddy/forms.py" />
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/GymBuddyV.2/app/src/main/java/com/example/kaveon14/gymbuddyv2/DataBase/DefaultData/ReadDefaultWorkoutFile" afterPath="" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/.idea/workspace.xml" afterPath="$USER_HOME$/IdeaProjects/DSClass/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/settings.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/models.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/models.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/urls.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/urls.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/GameBoard.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/GameBoard.class" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Othello.class" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile$TileState.class" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile.class" afterPath="$USER_HOME$/IdeaProjects/DSClass/out/production/DSClass/OthelloProject/Tile.class" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/.idea/workspace.xml" afterPath="$USER_HOME$/IdeaProjects/DSClass/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/GameBoard.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/GameBoard.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Othello.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" afterPath="$USER_HOME$/IdeaProjects/DSClass/src/OthelloProject/Tile.java" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/.idea/workspace.xml" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/settings.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/settings.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/mysite/urls.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/models.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/templates/workoutbuddy/details.html" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/urls.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" afterPath="$USER_HOME$/PycharmProjects/Portfolio Website/mysite/workoutbuddy/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/models.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_exercise.html" afterPath="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_exercise.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_list.html" afterPath="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/urls.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddy/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddy/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/urls.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkoutBuddySite/views.py" afterPath="$PROJECT_DIR$/WorkoutBuddySite/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,77 +40,105 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-              <folding>
-                <element signature="e#650#691#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WorkoutBuddy/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WorkoutBuddy/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1508797187000" expanded="true" signature="4716:5041" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="populate_db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="50" column="80" lean-forward="false" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5350501">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="31" column="65" lean-forward="false" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddy/forms.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#0#24#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddy/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#85#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddy/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="110" lean-forward="false" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="exercise_list.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_list.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="46">
+                  <caret line="88" column="13" lean-forward="false" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WorkoutBuddy/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2235">
+                  <caret line="149" column="9" lean-forward="false" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                    <marker date="1509248609000" expanded="true" signature="4690:5015" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/UserMedia/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -142,20 +174,25 @@
         <option value="$PROJECT_DIR$/WorkoutBuddy/migrations/0003_profile.py" />
         <option value="$PROJECT_DIR$/WorkoutBuddy/migrations/0004_auto_20170922_1849.py" />
         <option value="$PROJECT_DIR$/WorkoutBuddy/migrations/0008_auto_20170924_2017.py" />
-        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_list.html" />
         <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_description.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/urls.py" />
-        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_exercise.html" />
-        <option value="$PROJECT_DIR$/WorkoutBuddy/urls.py" />
         <option value="$PROJECT_DIR$/WorkoutBuddySite/views.py" />
-        <option value="$PROJECT_DIR$/WorkoutBuddy/views.py" />
-        <option value="$PROJECT_DIR$/WorkoutBuddySite/settings.py" />
-        <option value="$PROJECT_DIR$/WorkoutBuddySite/urls.py" />
-        <option value="$PROJECT_DIR$/WorkoutBuddy/models.py" />
         <option value="$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/forms.py" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/ce.html" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/test2.html" />
+        <option value="$PROJECT_DIR$/WorkoutBuddySite/settings.py" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/models.py" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/test.html" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_exercise.html" />
+        <option value="$PROJECT_DIR$/WorkoutBuddySite/urls.py" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_list.html" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/urls.py" />
+        <option value="$PROJECT_DIR$/WorkoutBuddy/views.py" />
+        <option value="$PROJECT_DIR$/UserMedia/.gitignore" />
       </list>
     </option>
   </component>
@@ -179,8 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,6 +238,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WorkoutBuddySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkoutBuddySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkoutBuddySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="WorkoutBuddy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -221,7 +270,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkoutBuddy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,20 +288,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WorkoutBuddy" />
+              <option name="myItemId" value="UserMedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkoutBuddySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkoutBuddySite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
+              <option name="myItemId" value="UserMedia" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserExerciseImages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user_1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomExerciseImages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,15 +336,15 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UserMedia/media" />
+      <recent name="$PROJECT_DIR$/UserMedia" />
+      <recent name="$PROJECT_DIR$/static/UserExerciseImages" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/accounts/templates/accounts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WorkoutBuddy/static/WorkoutBuddy/ExerciseImages" />
-      <recent name="$PROJECT_DIR$/WorkoutBuddy/static/WorkoutBuddy" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/WorkoutBuddySite" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,14 +454,15 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35407725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7189781" sideWeight="0.5095314" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30361447" sideWeight="0.49205717" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49841145" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54306567" sideWeight="0.49046862" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37108433" sideWeight="0.49046862" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -393,9 +471,28 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7189781" sideWeight="0.5095314" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30361447" sideWeight="0.49205717" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37108433" sideWeight="0.49046862" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -456,57 +553,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accounts/views.py" />
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="e#650#691#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py" />
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/models.py" />
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-          <folding>
-            <element signature="e#650#691#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="15" lean-forward="true" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/default_data/default_sub_workouts.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -656,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_description.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutBuddy/migrations/0003_exercisegoals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -701,13 +740,6 @@
     <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logout.html" />
     <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/login.html" />
     <entry file="file://$PROJECT_DIR$/accounts/models.py" />
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/urls.py" />
     <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,59 +748,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_exercise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/views.py" />
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_mainworkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#650#691#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutBuddy/default_data/default_sub_workouts.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -778,20 +758,160 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutBuddy/management/commands/populate_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
+        <state relative-caret-position="735">
           <caret line="50" column="80" lean-forward="false" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_subworkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_mainworkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserMedia/media/UserExerciseImages/user_1/CustomExerciseImages/poe_edgar_allan.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_description.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/create_exercise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/ce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/custom_exercise_description.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="110" lean-forward="false" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="65" lean-forward="false" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddy/templates/WorkoutBuddy/exercise_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkoutBuddySite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="88" column="13" lean-forward="false" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutBuddy/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+        <state relative-caret-position="2235">
+          <caret line="149" column="9" lean-forward="false" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1508797187000" expanded="true" signature="4716:5041" ph="..." />
+            <marker date="1509248609000" expanded="true" signature="4690:5015" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserMedia/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

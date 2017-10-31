@@ -1,0 +1,10 @@
+{% block content %}
+    <h2> MainWorkouts </h2>
+    <ul>
+        {% for mainworkout in mainworkout_list %}
+        <li>
+            <h4>{{mainworkout.main_workout_name}}</h4>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

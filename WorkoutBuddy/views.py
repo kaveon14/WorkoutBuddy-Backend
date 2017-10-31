@@ -1,13 +1,13 @@
-from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise
+from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 # Create your views here.
-from .forms import CreateExerciseForm
+from .forms import CreateExerciseForm,CreateMainWorkoutForm
 
 @login_required(login_url='/login/')
-def CreateExercise(request):
+def createExercise(request):#edit this
     if request.method == 'POST':
         form = CreateExerciseForm(request.POST, request.FILES)
 
@@ -28,6 +28,21 @@ def CreateExercise(request):
         form = CreateExerciseForm()
     return render(request, 'WorkoutBuddy/create_exercise.html', {'form': form})
 
+@login_required(login_url='/login/')
+def createMainWorkout(request):
+    if request.method == 'POST':
+        form = CreateMainWorkoutForm(request.POST)
+        if form.is_valid():
+           main_workout_name = form.cleaned_data.get('main_workout_name')
+           main_workout = MainWorkout(main_workout_name=main_workout_name)
+           main_workout.save()
+           user = request.user
+           main_workout.user_profile = Profile.objects.get(user=user)
+           main_workout.save()
+           return HttpResponseRedirect('/subworkouts/')
+    else:
+        form = CreateMainWorkoutForm()
+    return render(request, 'WorkoutBuddy/create_mainworkout.html', {'form': form})
 
 class ViewDefaultExercises(generic.ListView):
     template_name = 'WorkoutBuddy/exercise_list.html'
@@ -49,13 +64,29 @@ class CustomExerciseDescription(generic.DetailView):
     context_object_name = 'exercise'
     template_name = 'WorkoutBuddy/custom_exercise_description.html'
 
-class CreateMainWorkout(generic.CreateView):
-    template_name = 'WorkoutBuddy/create_mainworkout.html'
-    model = MainWorkout
-    fields = ['main_workout_name']
-
-class CreateSubWorkout(generic.CreateView):
+class CreateSubWorkout(generic.CreateView):#on save go to page too add exercise goals
     template_name = 'WorkoutBuddy/create_subworkout.html'
     model = SubWorkout
     fields = ['main_workout','sub_workout_name']
 
+class SubWorkoutList(generic.ListView):
+    template_name = 'WorkoutBuddy/subworkout_list.html'
+    model = SubWorkout#includde link to page with all exercises and goals with links to ex descriptions
+    context_object_name = 'subworkout_list'
+
+class MainWorkoutList(generic.ListView):
+    template_name = 'WorkoutBuddy/mainworkout_list.html'
+    model = MainWorkout#include link to page with sub workouts
+    context_object_name = 'mainworkout_list'
+
+class ViewExerciseGoals(generic.ListView):
+    template_name = 'WorkoutBuddy/exercise_goals.html'
+    model = ExerciseGoals
+    context_object_name = 'exercise_list'
+
+    def get_context_data(self, **kwargs):
+        context = super(ViewExerciseGoals, self).get_context_data(**kwargs)
+        id = self.kwargs['pk']
+        subworkout = SubWorkout.objects.get(id=id)
+        context['exercise_list'] = ExerciseGoals.objects.filter(sub_workout=subworkout)
+        return context

@@ -1,0 +1,12 @@
+{% block content %}
+    <h2> SubWorkouts </h2>
+    <ul>
+        {% for subworkout in subworkout_list %}
+        <li>
+            <a href="{% url 'WorkoutBuddy:exercise_goals' subworkout.id %}">
+                {{subworkout.main_workout.main_workout_name}} -> {{subworkout.sub_workout_name}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

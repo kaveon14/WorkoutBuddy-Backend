@@ -10,7 +10,7 @@
         {% endfor %}
         {% for custom_exercise in custom_exercise_list %}
             <li>
-                <a href="{% url 'WorkoutBuddy:' exercise.id %}">
+                <a href="{% url 'WorkoutBuddy:custom_exercise_description' exercise.id %}">
                     {{custom_exercise.exercise_name}}
                 </a>
             </li>

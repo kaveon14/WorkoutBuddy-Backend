@@ -1,0 +1,16 @@
+{% block content %}
+    <h2> Exercise Goals </h2>
+    <ul>
+        {% for exercise in exercise_list %}
+            {% if exercise.default_exercise %}
+        <h4>{{exercise.default_exercise.exercise_name}}</h4>
+            {% endif %}
+
+            {% if exercise.custom_exercise %}
+        <h6>{{exercise.custom_exercise.exercise_name}}</h6>
+            {% endif %}
+
+        <h7>Goal Sets: {{exercise.goal_sets}} Goal Reps: {{exercise.goal_reps}}</h7>
+        {% endfor %}
+    </ul>
+{% endblock %}

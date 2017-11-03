@@ -31,6 +31,7 @@ def createExercise(request):#edit this
 @login_required(login_url='/login/')
 def createMainWorkout(request):
     if request.method == 'POST':
+
         form = CreateMainWorkoutForm(request.POST)
         if form.is_valid():
            main_workout_name = form.cleaned_data.get('main_workout_name')
@@ -44,12 +45,12 @@ def createMainWorkout(request):
         form = CreateMainWorkoutForm()
     return render(request, 'WorkoutBuddy/create_mainworkout.html', {'form': form})
 
-class ViewDefaultExercises(generic.ListView):
+class ViewDefaultExercises(generic.ListView):#base add exercise goals off of this
     template_name = 'WorkoutBuddy/exercise_list.html'
     model = DefaultExercise
     context_object_name = 'exercise_list'
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs):#needs editing
         context = super(ViewDefaultExercises,self).get_context_data(**kwargs)
         context['ce_list'] = CustomExercise.objects.order_by('exercise_name')
         return context

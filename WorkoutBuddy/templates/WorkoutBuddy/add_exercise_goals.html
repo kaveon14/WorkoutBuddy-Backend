@@ -1,0 +1,22 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <fieldset >
+    {% block content %}
+    <h2> Exercises </h2>
+    <ul>
+        {% for exercise in exercise_list %}
+            <li>
+                <input type="checkbox"> {{exercise.exercise_name}}
+            </li>
+        {% endfor %}
+        {% for custom_exercise in custom_exercise_list %}
+            <li>
+                <input type="checkbox"> {{custom_exercise.exercise_name}}
+            </li>
+        {% endfor %}
+    </ul>
+        {% endblock %}
+    </fieldset>
+    <input type="submit" value="Save" />
+</form>

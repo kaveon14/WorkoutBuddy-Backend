@@ -15,15 +15,9 @@ def user_directory_exercise_image_path(instance, filename):
     d = 'CustomExerciseImages/' + filename
     return 'user_{0}/{1}'.format(instance.user.id, d)
 #use these in a view or template
-def user_local_directory_profile_image_path(filename):
-    path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/ProfileImage/'
+def user_local_directory_image_path(filename):
+    path = 'storage/emulated/0/Android/data/com.example.WorkoutBuddy.workoutbuddy/files/Pictures/'
     return path + filename
-
-def user_local_directory_progress_photo_path(filename):
-    path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/ProgressPhotos/'
-    return path + filename
-
-
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)

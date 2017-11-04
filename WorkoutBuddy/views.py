@@ -1,4 +1,4 @@
-from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals
+from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals,ProgressPhoto
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
@@ -91,3 +91,9 @@ class ViewExerciseGoals(generic.ListView):
         subworkout = SubWorkout.objects.get(id=id)
         context['exercise_list'] = ExerciseGoals.objects.filter(sub_workout=subworkout)
         return context
+
+class ViewProgressPhotos(generic.DetailView):#need to have list to get to this
+    template_name = ''
+    model = ProgressPhoto
+    fields = ['date_time','photo']
+    context_object_name = 'progress_photo'

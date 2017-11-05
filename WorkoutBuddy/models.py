@@ -9,7 +9,7 @@ def user_directory_profile_image(instance, filename):
 def user_directory_progress_photo__path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
     d = 'ProgressPhotos/' + filename
-    return 'user_{0}/{1}'.format(instance.user.id, d)
+    return d
 
 def user_directory_exercise_image_path(instance, filename):
     d = 'CustomExerciseImages/' + filename
@@ -113,15 +113,15 @@ class ExerciseGoals(models.Model):
 class ProfileImage(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile, null=True)
-    profile_image = models.ImageField(upload_to=user_directory_profile_image)#define user/profile_image/
-    local_profile_image = models.ImageField(null=True)
+    profile_image = models.ImageField(upload_to=user_directory_profile_image,max_length=500)#define user/profile_image/
+    local_profile_image = models.ImageField(null=True,max_length=2000)
     date = models.DateField(help_text="MM-DD-YYYY")
 
 class ProgressPhoto(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile, null=True)
-    photo = models.ImageField(upload_to=user_directory_profile_image)
-    local_photo = models.ImageField(null=True)
+    photo = models.ImageField(upload_to=user_directory_progress_photo__path,max_length=500)
+    local_photo = models.ImageField(null=True,max_length=2000)
     date_time = models.DateTimeField(help_text="MM-DD-YYYY HH:MM:SS")
 
 class MainWorkout(models.Model):

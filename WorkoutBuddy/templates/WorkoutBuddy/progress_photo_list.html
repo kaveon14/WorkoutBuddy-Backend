@@ -1,0 +1,12 @@
+{% block content %}
+    <h2> Progress Photos </h2>
+    <ul>
+        {% for photo in progress_photos %}
+            <li>
+                <a href="{% url 'WorkoutBuddy:progress_photo' photo.id %}">
+                    {{photo.date_time}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

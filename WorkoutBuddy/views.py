@@ -1,10 +1,35 @@
-from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals,ProgressPhoto
+from WorkoutBuddy.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals,ProgressPhoto,user_local_directory_image_path
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 # Create your views here.
-from .forms import CreateExerciseForm,CreateMainWorkoutForm
+import datetime
+from .forms import CreateExerciseForm,CreateMainWorkoutForm,CreateProgressPhotoForm
+
+@login_required(login_url='/login/')
+def createProgressPhoto(request):
+    if request.method == 'POST':
+        form = CreateProgressPhotoForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            photo = form.cleaned_data.get('photo')
+            i = datetime.datetime.now()
+            date_time = '%s-%s-%s %s:%s:%s' % (i.year, i.month, i.day, i.hour, i.minute, i.second)
+            progress_photo = ProgressPhoto(date_time=date_time)
+            progress_photo.save()
+            progress_photo.photo = photo
+            user = request.user
+            user_profile = Profile.objects.get(user=user)
+            local_path = user_local_directory_image_path(photo.name)
+            progress_photo.local_photo = local_path
+            progress_photo.user_profile = user_profile
+            progress_photo.save()
+            return HttpResponseRedirect('/exercises/progressphotos/')
+    else:
+        form = CreateProgressPhotoForm()
+    return render(request, 'WorkoutBuddy/create_progress_photo.html', {'form': form})
+
 
 @login_required(login_url='/login/')
 def createExercise(request):#edit this
@@ -92,8 +117,23 @@ class ViewExerciseGoals(generic.ListView):
         context['exercise_list'] = ExerciseGoals.objects.filter(sub_workout=subworkout)
         return context
 
+class CreateProgressPhoto(generic.CreateView):#use form
+    template_name = 'WorkoutBuddy/'
+    model = ProgressPhoto
+    context_object_name = 'progress_photo'
+
+
+class ProgressPhotosList(generic.ListView):
+    template_name = 'WorkoutBuddy/progress_photo_list.html'
+    model = ProgressPhoto
+    context_object_name = 'progress_photos'
+
+    def get_queryset(self):
+        user_profile = Profile.objects.get(user=self.request.user)
+        return ProgressPhoto.objects.filter(user_profile=user_profile).order_by('date_time')
+
 class ViewProgressPhotos(generic.DetailView):#need to have list to get to this
-    template_name = ''
+    template_name = 'WorkoutBuddy/progress_photo.html'
     model = ProgressPhoto
     fields = ['date_time','photo']
     context_object_name = 'progress_photo'

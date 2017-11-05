@@ -1,7 +1,8 @@
 from django.conf.urls import url
 import WorkoutBuddy.views
 from WorkoutBuddy.views import CreateSubWorkout,\
-    ViewDefaultExercises,ExerciseDescription,CustomExerciseDescription,SubWorkoutList,MainWorkoutList,ViewExerciseGoals
+    ViewDefaultExercises,ExerciseDescription,CustomExerciseDescription,SubWorkoutList,MainWorkoutList,ViewExerciseGoals,\
+    ProgressPhotosList,ViewProgressPhotos
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -18,6 +19,9 @@ urlpatterns = [
     url(r'subworkouts/', SubWorkoutList.as_view(), name='subworkout_list'),
     url(r'mainworkouts/', MainWorkoutList.as_view(), name='mainworkout_list'),
     url(r'^(?P<pk>[0-9]+)/exercisegoals/$', ViewExerciseGoals.as_view(), name='exercise_goals'),
+    url(r'createProgressPhoto/', WorkoutBuddy.views.createProgressPhoto, name='create_progress_photo'),
+    url(r'progressphotos/',ProgressPhotosList.as_view(), name='progress_photo_list'),
+    url(r'^(?P<pk>[0-9]+)/progress_photo/$', ViewProgressPhotos.as_view(), name='progress_photo'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

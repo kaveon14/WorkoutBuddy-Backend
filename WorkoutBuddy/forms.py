@@ -1,5 +1,5 @@
 from django import forms
-from WorkoutBuddy.models import CustomExercise,MainWorkout,ExerciseGoals
+from WorkoutBuddy.models import CustomExercise,MainWorkout,ExerciseGoals,ProgressPhoto
 
 class CreateExerciseForm(forms.ModelForm):#Edit this
     exercise_image = forms.ImageField(label="Exercise Image")
@@ -12,4 +12,7 @@ class CreateMainWorkoutForm(forms.ModelForm):
         model = MainWorkout
         fields = ['main_workout_name']
 
-
+class CreateProgressPhotoForm(forms.ModelForm):
+    class Meta:
+        model = ProgressPhoto
+        fields = ['photo']

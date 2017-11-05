@@ -1,0 +1,5 @@
+{% block content %}
+    <h2> {{progress_photo.date_time}}</h2>
+    {% load static %}
+    <img src="{{progress_photo.photo.url}}" style="width:300px;height:400px"/>
+{% endblock %}

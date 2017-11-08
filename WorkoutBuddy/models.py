@@ -8,8 +8,7 @@ def user_directory_profile_image(instance, filename):
 
 def user_directory_progress_photo__path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
-    d = 'ProgressPhotos/' + filename
-    return d
+    return filename
 
 def user_directory_exercise_image_path(instance, filename):
     d = 'CustomExerciseImages/' + filename

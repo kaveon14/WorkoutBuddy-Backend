@@ -2,6 +2,44 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from WorkoutBuddy.models import Profile
+from django.contrib.auth import authenticate
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def android_login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                json = {
+                    'username':username,
+                    'password':password,
+                    'id':user.id,
+                    'error':False,
+                    'message':'Successfully Logged In'
+                }
+                return JsonResponse(json)
+            else:
+                json = {
+                    'username': None,
+                    'password': None,
+                    'id': 0,
+                    'error': True,
+                    'message': 'Wrong Username or Password'
+                }
+                return JsonResponse(json)
+        else:
+            json = {
+                'username': None,
+                'password': None,
+                'id': 0,
+                'error': True,
+                'message': 'Wrong Username or Password'
+            }
+            return JsonResponse(json)
 
 def signup(request):#need to also create a new profile here
     if request.method == 'POST':

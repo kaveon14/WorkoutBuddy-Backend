@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 # may use validators
 def user_directory_profile_image(instance, filename):
     d = 'ProfileImage/' + filename
@@ -8,14 +7,15 @@ def user_directory_profile_image(instance, filename):
 
 def user_directory_progress_photo__path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
-    return filename
+    d = 'ProgressPhotos/' + filename
+    return 'user_{0}/{1}'.format(instance.user.id, d)
 
 def user_directory_exercise_image_path(instance, filename):
     d = 'CustomExerciseImages/' + filename
     return 'user_{0}/{1}'.format(instance.user.id, d)
 #use these in a view or template
-def user_local_directory_image_path(filename):
-    path = 'storage/emulated/0/Android/data/com.example.WorkoutBuddy.workoutbuddy/files/Pictures/'
+def user_local_directory_image_path(filename):#this will be changed in the future
+    path = 'storage/emulated/0/Android/data/com.example.WBBackend.workoutbuddy/files/Pictures/'
     return path + filename
 
 class Profile(models.Model):
@@ -36,7 +36,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
-
 
 class MaxSquat(models.Model):
     max_squat = models.IntegerField(default=0)
@@ -61,7 +60,6 @@ class MaxDeadLift(models.Model):
         ('lbs', 'pounds'),
     )
     unit = models.CharField(max_length=3, choices=UNIT_CHOICES, default='lbs')
-
 
 class Body(models.Model):
     UNIT_CHOICES = (
@@ -97,8 +95,8 @@ class CustomExercise(models.Model):
                                        max_length=500)  # define image path user/custom_exercise_images/
     local_exercise_image = models.ImageField(null=True, max_length=500)
 
-    def user_local_directory_exercise_image_path(self,filename):
-        path = '/data/user/0/com.example.WorkoutBuddy.workoutbuddy/files/CustomExerciseImages/'
+    def user_local_directory_exercise_image_path(self,filename):#take a look at this
+        path = '/data/user/0/com.example.WBBackend.workoutbuddy/files/CustomExerciseImages/'
         return path + filename
 
 class ExerciseGoals(models.Model):
@@ -120,7 +118,7 @@ class ProgressPhoto(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile, null=True)
     photo = models.ImageField(upload_to=user_directory_progress_photo__path,max_length=500)
-    local_photo = models.ImageField(null=True,max_length=2000)
+    local_photo = models.CharField(null=True,max_length=2000)
     date_time = models.DateTimeField(help_text="MM-DD-YYYY HH:MM:SS")
 
 class MainWorkout(models.Model):

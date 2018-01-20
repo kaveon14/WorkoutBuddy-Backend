@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from WorkoutBuddySite import views as core_views
+from AdminBackend import views as core_views
 from django.conf import settings
 from django.conf.urls.static import static
-import WorkoutBuddySite.views as view
+import AdminBackend.views as view
 
 
 
@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^signup/$', core_views.signup, name='signup'),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'exercises/', include('WorkoutBuddy.urls')),
+    url(r'exercises/', include('WBBackend.urls')),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

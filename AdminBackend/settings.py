@@ -25,12 +25,12 @@ SECRET_KEY = '-!4vt9lbrp8gq%19y%!tjq9w22hlse!_!yq_#4)!cp#()!palf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.100.137.238','0.0.0.0','192.168.0.15','127.0.0.1','localhost:8000','localhost']
+ALLOWED_HOSTS = ['192.168.0.12','10.100.137.238','0.0.0.0','192.168.0.15','127.0.0.1','localhost:8000','localhost']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'WorkoutBuddy',
+    'WBBackend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,7 +51,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ROOT_URLCONF = 'WorkoutBuddySite.urls'
+ROOT_URLCONF = 'AdminBackend.urls'
 
 TEMPLATES = [
     {
@@ -69,9 +69,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'WorkoutBuddySite.wsgi.application'
+WSGI_APPLICATION = 'AdminBackend.wsgi.application'
 
-AUTH_PROFILE_MODULE = 'WorkoutBuddy.Profile'
+AUTH_PROFILE_MODULE = 'WBBackend.Profile'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -128,4 +128,4 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'UserMedia/media/UserExerciseImages')
+MEDIA_ROOT = os.path.join(BASE_DIR,'UserMedia/media')

@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('WorkoutBuddy', '0001_initial'),
+        ('WBBackend', '0001_initial'),
     ]
 
     operations = [

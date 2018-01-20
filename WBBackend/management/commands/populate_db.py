@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from WorkoutBuddy.models import DefaultExercise,MainWorkout,SubWorkout,ExerciseGoals
+from WBBackend.models import DefaultExercise,MainWorkout,SubWorkout,ExerciseGoals
 
 
 '''Need to add sets and reps to sub workouts'''
@@ -9,10 +9,10 @@ class Command(BaseCommand):
 
 #need to change this slightly
     def get_exercise_image_path(self, exercise_name):#check for both png and jpg
-        default_image_path = 'WorkoutBuddy/ExerciseImages/default_exercise_image.png'
+        default_image_path = 'WBBackend/ExerciseImages/default_exercise_image.png'
         image_png = None
         try:
-            image_png = open('WorkoutBuddy/ExerciseImages/'+exercise_name+'.png')
+            image_png = open('WBBackend/ExerciseImages/'+exercise_name+'.png')
         except FileNotFoundError:
             print('File Not Found!!')
         if image_png != None:
@@ -21,7 +21,7 @@ class Command(BaseCommand):
 
         image_jpg = None
         try:
-            image_jpg = open('WorkoutBuddy/ExerciseImages/'+exercise_name+'.png')
+            image_jpg = open('WBBackend/ExerciseImages/'+exercise_name+'.png')
         except FileNotFoundError:
             print('File Not Found!!')
         if image_jpg != None:
@@ -30,7 +30,7 @@ class Command(BaseCommand):
         return default_image_path
 
     def create_exercises(self):
-            exercise_content_file = open('WorkoutBuddy/default_data/default_exercise_content.txt','r+')
+            exercise_content_file = open('WBBackend/default_data/default_exercise_content.txt','r+')
             exercise_list = exercise_content_file.read().split('\n')
             exercise_file_lines = ''
             ex_name = exercise_list[0]
@@ -60,7 +60,7 @@ class Command(BaseCommand):
         main_workout = MainWorkout(main_workout_name='Default Workouts')
         main_workout.save()
 
-        sub_workout_content_file = open('WorkoutBuddy/default_data/default_sub_workouts.txt','r+')
+        sub_workout_content_file = open('WBBackend/default_data/default_sub_workouts.txt','r+')
         file_lines = sub_workout_content_file.read().split('\n')
 
         i = 1

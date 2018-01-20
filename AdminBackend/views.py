@@ -1,7 +1,7 @@
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
-from WorkoutBuddy.models import Profile
+from WBBackend.models import Profile
 from django.contrib.auth import authenticate
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -17,8 +17,8 @@ def android_login(request):
                 json = {
                     'username':username,
                     'password':password,
-                    'id':user.id,
-                    'error':False,
+                    'id':str(user.id),
+                    'error':str(False),
                     'message':'Successfully Logged In'
                 }
                 return JsonResponse(json)

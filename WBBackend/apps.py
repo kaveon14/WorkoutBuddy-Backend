@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class WorkoutbuddyConfig(AppConfig):
-    name = 'WorkoutBuddy'
+    name = 'WBBackend'

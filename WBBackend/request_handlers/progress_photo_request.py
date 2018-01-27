@@ -1,9 +1,9 @@
-from WBBackend.models import ProgressPhoto
-#gonna have import error where user is located
+from WBBackend.models import ProgressPhoto,Profile_image_path
+
 def getProgressPhotos(request):
     if request.method == 'POST':
-        user_id = request['user_id']
-        user = User.objects.get(id=user_id)
+        profile_id = request['profileId']
+        profile = Profile.objects.get(id=profile_id)
         # pp = Progress Photo
         pp_list = ProgressPhoto.objects.filter(user=user).order_by('-created_date')
 

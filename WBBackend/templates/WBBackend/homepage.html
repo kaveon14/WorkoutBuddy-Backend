@@ -1,0 +1,145 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+    .bottomNav {
+        text-align: center;
+        overflow: hidden;
+        background-color: black;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        padding: 1rem;
+    }
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.loginbtn {
+    position: absolute;
+    right: 1%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn,.dropdown:hover .loginbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+</head>
+
+<body>
+<div class="navbar">
+
+  <div class="dropdown" >
+    <button class="dropbtn">Exercise
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">All Exercises</a>
+      <a href="#">Default Exercise</a>
+      <a href="#">Custom Exercises</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Workout Stats</button>
+  </div>
+
+
+
+  <div class="dropdown" >
+    <button class="dropbtn">Workout
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">All Workouts</a>
+      <a href="#">Default Workouts</a>
+      <a href="#">Custom Workouts</a>
+    </div>
+  </div>
+
+   <div class="dropdown">
+    <button class="dropbtn">Progress Photos</button>
+  </div>
+
+  <div class="dropdown">
+    <button class="loginbtn" style="float:right">Login</button>
+  </div>
+
+  <!- should be a button right now -->
+</div>
+<div style="border: 2px solid blue;align-text: right; padding-left: 300px;padding-right: 300px;height: 85%;">
+  <h1 style="text-align: center;vertical-align: middle;">WorkoutBuddy</h1>
+  <p style="text-align: center;vertical-align: middle;">Some content..<p><!- add intro here -->
+</div>
+
+
+<div class="bottomNav"><!- add terms and shit, and link to android app --
+  <p style="color: white;">Some content..</p>
+</div>
+
+</body>
+</html>

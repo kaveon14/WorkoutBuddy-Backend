@@ -1,5 +1,5 @@
 from django import forms
-from WorkoutBuddy.models import CustomExercise,MainWorkout,ExerciseGoals,ProgressPhoto
+from WBBackend.models import CustomExercise,MainWorkout,ExerciseGoals,ProgressPhoto
 
 class CreateExerciseForm(forms.ModelForm):#Edit this
     exercise_image = forms.ImageField(label="Exercise Image")

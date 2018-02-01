@@ -9,7 +9,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('WorkoutBuddy', '0002_remove_subworkout_date'),
+        ('WBBackend', '0002_remove_subworkout_date'),
     ]
 
     operations = [
@@ -19,8 +19,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('goal_sets', models.IntegerField(choices=[(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15)], default=1)),
                 ('goal_reps', models.CharField(max_length=6)),
-                ('custom_exercise', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='WorkoutBuddy.CustomExercise')),
-                ('default_exercise', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='WorkoutBuddy.DefaultExercise')),
+                ('custom_exercise', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='WBBackend.CustomExercise')),
+                ('default_exercise', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='WBBackend.DefaultExercise')),
             ],
         ),
     ]

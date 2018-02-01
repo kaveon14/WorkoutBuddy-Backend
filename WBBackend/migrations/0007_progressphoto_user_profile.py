@@ -9,13 +9,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('WorkoutBuddy', '0006_exercisegoals_sub_workout'),
+        ('WBBackend', '0006_exercisegoals_sub_workout'),
     ]
 
     operations = [
         migrations.AddField(
             model_name='progressphoto',
             name='user_profile',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='WorkoutBuddy.Profile'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='WBBackend.Profile'),
         ),
     ]

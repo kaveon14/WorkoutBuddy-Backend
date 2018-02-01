@@ -1,0 +1,41 @@
+If hashtag before hyphen == completed
+#URGENT use post for all creation,updating,deletion, anet anytime user or profile id is needed
+# URGENT CHANGE ALL ID TAGS TO _id in both this,phpo api, and android backend
+# URGENT CREATE FILE THAT HOLDS ALL request SHIT
+# URGENT DO THAT FORM CLEAN SHIT AND MODEL CLEAN SHIT
+
+#- need to get all exercises, including description
+#- need to get all main workouts
+#- need to get all sub workouts
+#- need to get all workout stats
+#- need to get all progress photos
+#- need to get all profile photos
+#- need to get all profile information
+
+#this is for saving new data
+#this should be easy, just send the request in json and copy and save the data
+#- need to be able create custom exercises and images
+- need to be able create custom mainworkouts
+- need to be able create custom subworkouts
+- need to be able create and upload progress photos
+- need to be able create and upload profile photos
+- need to be able set all profile information
+
+#this is for deleting data
+#this should be easy, just send the with the id and model(s) to be deleted and copy and save the data
+#be sure to delete associated fileds for: manyTomany,foreighnKey, and OneToOne
+- need to be able delete custom exercises and images
+- need to be able delete custom mainworkouts
+- need to be able delete custom subworkouts
+- need to be able delete and upload progress photos
+- need to be able delete and upload profile photos
+- need to be able delete all profile information
+
+#this is for updating data
+#this should be easy, just send the request in json, with model(s) and id and update and save the data
+#- need to be able update custom exercises and images
+- need to be able update custom mainworkouts
+- need to be able update custom subworkouts
+- need to be able update and upload progress photos
+- need to be able update and upload profile photos
+- need to be able update all profile information

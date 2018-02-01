@@ -1,9 +1,9 @@
 {% block content %}
     <h2> Exercises </h2>
     <ul>
-        {% for exercise in exercise_list %}
+       {% for exercise in exercise_list %}
             <li>
-                <a href="{% url 'WorkoutBuddy:exercise_description' exercise.id %}">
+                <a href="{% url 'WBBackend:exercise_description' exercise.id %}">
                     {{exercise.exercise_name}}
                 </a>
             </li>
@@ -11,7 +11,7 @@
         {% endfor %}
         {% for custom_exercise in custom_exercise_list %}
             <li>
-                <a href="{% url 'WorkoutBuddy:custom_exercise_description' exercise.id %}">
+                <a href="{% url 'WBBackend:custom_exercise_description' exercise.id %}">
                     {{custom_exercise.exercise_name}}
                 </a>
             </li>

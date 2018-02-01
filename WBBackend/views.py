@@ -1,12 +1,13 @@
-from WBBackend.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals,ProgressPhoto,user_local_directory_image_path
+from WBBackend.models import MainWorkout,SubWorkout,DefaultExercise,CustomExercise,Profile,ExerciseGoals,ProgressPhoto,user_local_directory_image_path, Workout, WorkoutExercise, Set
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 # Create your views here.
 import datetime
-from .forms import CreateExerciseForm,CreateMainWorkoutForm,CreateProgressPhotoForm
-
+from  WBBackend.request_handlers import workout_requests
+from .forms import CreateExerciseForm , CreateMainWorkoutForm , CreateProgressPhotoForm
+#will be altered massively
 @login_required(login_url='/login/')
 def createProgressPhoto(request):
     if request.method == 'POST':
@@ -32,7 +33,7 @@ def createProgressPhoto(request):
     return render(request, 'WBBackend/create_progress_photo.html', {'form': form})
 
 @login_required(login_url='/login/')
-def createExercise(request):#edit this
+def createExercise(request):
     if request.method == 'POST':
         form = CreateExerciseForm(request.POST, request.FILES)
 
@@ -137,3 +138,39 @@ class ViewProgressPhotos(generic.DetailView):#need to have list to get to this
     model = ProgressPhoto
     fields = ['date_time','photo']
     context_object_name = 'progress_photo'
+
+
+
+
+
+
+#all of this are not filling in all needed fields
+class S(generic.CreateView):#and finally this
+    template_name = 'WBBackend/create_subworkout.html'
+    model = Set
+    fields = ['workout_exercise','set','reps','weight','unit']
+
+class CompleteEX(generic.CreateView):#then this
+    template_name = 'WBBackend/create_subworkout.html'
+    model = WorkoutExercise
+    fields = ['workout_tag','exercise_name','sets','rep_range']
+    
+class DoWorkout(generic.CreateView):#this first
+    template_name = 'WBBackend/create_subworkout.html'
+    model = Workout
+    #of course the completed exercises portion is wrong
+    fields = ['date','user_profile','sub_workout_name']
+    context_object_name = 'workout'
+
+
+
+#--this can all be done in one sql query
+''' to get a completed workout: needs {
+1. get workout for a date
+2. get completed_exercises(WorkoutExercise)
+3. get sets
+4 from there get completed sets with reps and weight and unit
+}
+
+ '''
+    

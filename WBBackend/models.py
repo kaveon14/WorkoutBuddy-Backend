@@ -83,18 +83,21 @@ class Body(models.Model):
 
 class DefaultExercise(models.Model):
     exercise_name = models.CharField(max_length=100)
-    exercise_description = models.TextField(max_length=2000)
+    exercise_description = models.TextField(max_length=1000)
     exercise_image = models.ImageField(null=True)
 
 class CustomExercise(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile,null=True)
     exercise_name = models.CharField(max_length=100)
-    exercise_description = models.TextField(max_length=2000)
+    exercise_description = models.TextField(max_length=1000)
+    #change the name of these
     exercise_image = models.ImageField(upload_to=user_directory_exercise_image_path, null=True,
                                        max_length=500)  # define image path user/custom_exercise_images/
+    #local to android device
     local_exercise_image = models.ImageField(null=True, max_length=500)
 
+    #local to django
     def user_local_directory_exercise_image_path(self,filename):#take a look at this
         path = '/data/user/0/com.example.WBBackend.workoutbuddy/files/CustomExerciseImages/'
         return path + filename
@@ -117,8 +120,9 @@ class ProfileImage(models.Model):
 class ProgressPhoto(models.Model):
     user = User
     user_profile = models.ForeignKey(Profile, null=True)
+    # change name of photo and local
     photo = models.ImageField(upload_to=user_directory_progress_photo__path,max_length=500)
-    local_photo = models.CharField(null=True,max_length=2000)
+    local_photo = models.CharField(null=True,max_length=2000)#is this right
     date_time = models.DateTimeField(help_text="MM-DD-YYYY HH:MM:SS")
 
 class MainWorkout(models.Model):
@@ -147,20 +151,22 @@ class Set(models.Model):
 
 class WorkoutExercise(models.Model):
     workout_tag = models.ForeignKey('Workout')
+    #should be tied to an actual exercise
     exercise_name = models.CharField(max_length=100)  # change to char set and only use name
     completed_sets = models.ManyToManyField(Set)
     SET_CHOICES = zip(range(1, 16), range(1, 16))
     sets = models.IntegerField(default=1, choices=SET_CHOICES)
     rep_range = models.CharField(max_length=100)
-    weight = models.IntegerField(default=0)
+    weight = models.IntegerField(default=0)# is this needed??? no it is not,unless it 
     UNIT_CHOICES = (
         ('kg', 'kilograms'),
         ('lbs', 'pounds'),
     )
     unit = models.CharField(max_length=3, choices=UNIT_CHOICES, default='lbs')
 
-class Workout(models.Model):
+class Workout(models.Model):#this needs a name and may need to be connected to subworkouts
     user_profile = models.ForeignKey(Profile, null=True)
+    subworkout_name = models.CharField(max_length=100,null=True)
     date = models.DateField(help_text="MM-DD-YYYY")
     completed_exercises = models.ManyToManyField(WorkoutExercise)
     total_sets = models.IntegerField(default=0)

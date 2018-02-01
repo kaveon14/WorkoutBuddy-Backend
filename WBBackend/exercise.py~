@@ -1,0 +1,17 @@
+#only returns the exerciese names and ids
+from django.http import JsonResponse
+from WBBackend.models import DefaultExercise
+
+def getDefaultExercises():
+    ex_arr = []
+    ex_list = DefaultExercise.objects.order_by('exercise_name')
+
+    for ex in ex_list:
+        e = {'id':ex.id,'exercise_name':ex.exercise_name}
+        ex_arr.append(e)
+
+    json = {'error':False,'message':'Request successfully completed',
+        'RequestResponse':ex_arr}
+    return JsonResponse(json)
+
+

@@ -1,5 +1,10 @@
 from django.http import JsonResponse
+from django.http import HttpResponse
 from WBBackend.models import DefaultExercise,CustomExercise,Profile
+from django.views.decorators.csrf import csrf_exempt
+import WBBackend.management.commands.populate_db as db
+# CSRF exemption is only temporary
+# create much better, dynamic error handling
 
 # IMAGES SHOULD BE LOADED FROM DIR
 #use post if sending userID or profileID
@@ -19,10 +24,11 @@ def getDefaultExercises(request):#need to check the request
     json = {'error':True,'message':'The http request needs to be "GET" not "POST" ','RequestResponse':None}
     return JsonResponse(json)
 
-# should these below be GET ?
+@csrf_exempt
 def getCustomExercises(request):
-    if request.method == 'GET':
-        user_profile = Profile.objects.get(user=request.user)#not going to work
+    if request.method == 'POST':
+        profileId = request.POST['profileId']
+        user_profile = Profile.objects.get(id=profileId)
         ex_list = CustomExercise.objects.filter(user_profile=user_profile).order_by('exercise_name')
         ex_arr = []
         for ex in ex_list:
@@ -34,10 +40,12 @@ def getCustomExercises(request):
     json = {'error':True,'message':'The http request needs to be "GET" not "POST" ','RequestResponse':None}
     return JsonResponse(json)
 
+@csrf_exempt
 def getAllExercises(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         defaultEx_list =  DefaultExercise.objects.order_by('exercise_name')
-        user_profile = Profile.objects.get(user=request.user)#not going to work
+        profileId = request.POST['profileId']
+        user_profile = Profile.objects.get(id=profileId)
         customEx_list =  CustomExercise.objects.filter(user_profile=user_profile).order_by('exercise_name')
         ex_arr = []
         for ex in defaultEx_list:
@@ -51,31 +59,36 @@ def getAllExercises(request):
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)
 
-    json = {'error':True,'message':'The http request needs to be "GET" not "POST" ','RequestResponse':None}
+    json = {'error':True,'message':'The http request needs to be "POST not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
-def createCustomExercise(request):
+@csrf_exempt
+def createCustomExercise(request):# need to set image to the default
     if request.method == 'POST':
-        profile_id = request['profile_id']
-        user_profile = Profile.objects.get(id=profile_id)
-        exercise_name = request['exercise_name']
-        exercise_description = request['exercise_description']
+        profile_id = request.POST['profileId']
+        user_profile = Profile.objects.get(id=profile_id) 
+        exercise_name = request.POST['exercise_name']
+        exercise_description = request.POST['exercise_description']
         custom_exercise = CustomExercise(user_profile=user_profile)
         custom_exercise.save()
         custom_exercise.exercise_name = exercise_name
         custom_exercise.exercise_description = exercise_description
+        custom_exercise.local_exercise_image = db.getDefaultImagePath()
         custom_exercise.save()
+        user_profile.custom_exercises.add(custom_exercise)
+        user_profile.save()
         json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
         return JsonResponse(json)
     
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
+@csrf_exempt
 def updateCustomExercise(request):
     if request.method == 'POST':
-        exercise_name = request['exercise_name']
-        exercise_description = request(['exercise_description'])
-        custom_exercise = CustomExercise.objects.get(id=request['customExerciserId'])
+        exercise_name = request.POST['exercise_name']
+        exercise_description = request.POST['exercise_description']
+        custom_exercise = CustomExercise.objects.get(id=request.POST['customExerciseId'])
         custom_exercise.save()
         custom_exercise.exercise_name = exercise_name
         custom_exercise.exercise_description = exercise_description
@@ -86,22 +99,36 @@ def updateCustomExercise(request):
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
-def updateCustomExerciseImage(request):#change, send the ce id
+@csrf_exempt
+def updateCustomExerciseImage(request):#must recreate whole exercise
     if request.method == 'POST':
-        custom_exercise = CustomExercise.objects.get(id=request['customExerciserId'])
-        custom_exercise.exercise_image = request['file']
-        custom_exercise.local_exercise_image = request['file']
-        custom_exercise.save()
-        json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
+        print(request.FILES)
+        if request.FILES != {}:
+            file_name = request.GET['file_name']
+            custom_exercise = CustomExercise.objects.get(id=request.GET['customExerciseId'])
+            custom_exercise.local_exercise_image = request.FILES[file_name]
+            custom_exercise.save()
+        else:
+            file_path = request.POST['file_path']
+            custom_exercise = CustomExercise.objects.get(id=request.POST['customExerciseId'])
+            custom_exercise.local_exercise_image = file_path
+            custom_exercise.save()
+
+        json = {'error':False,'message':'Request successfully completed','RequestResponse':'Custom Exercise Image Changed!'}
         return JsonResponse(json)
     
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
+@csrf_exempt
 def deleteCustomExercise(request):
     if request.method == 'POST':
-        custom_exercise = CustomExercise.objects.get(id=request['customExerciserId'])
-        custom_exercise.delete(using=DEFAULT_DB_ALIAS, keep_parents=False)#DB_ALIAS is not real
+        profile_id = request.POST['profileId']
+        user_profile = Profile.objects.get(id=profile_id)
+        custom_exercise = CustomExercise.objects.get(id=request.POST['customExerciseId'])
+        custom_exercise.delete(keep_parents=False)
+        user_profile.custom_exercises.remove(custom_exercise)
+        user_profile.save()
         custom_exercise = None
         json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
         return JsonResponse(json)

@@ -5,16 +5,16 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'getProfileImage',profile_requests.getProfileImage),
-    url(r'getMaxLifts',Profile_requests.getMaxLifts),
+    url(r'getMaxLifts',profile_requests.getMaxLifts),
+    url(r'updateProfileImage',profile_requests.updateProfileImage),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 ''' Things that need to be tested
 -- GET Requests --
 
 -- POST Requests --
-getProfileImage
-getMaxLifts
-
-
+#updateProfileImage
+#getProfileImage
+getMaxLifts#not testable yet
 
 '''

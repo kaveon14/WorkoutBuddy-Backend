@@ -17,7 +17,7 @@ urlpatterns = [
 #getMainWorkouts
 #getSubWorkouts
 #getSubWorkoutExercises
-getCompletedWorkouts
+#getCompletedWorkouts
 #createMainWorkout
 createSubWorkout# must be tested differently, possibly android app or use php to send post request
 '''

@@ -56,7 +56,7 @@ def getSubWorkoutExercises(request):
     json = {'error':True,'message':'The http request needs to be "GET" not "POST" ','RequestResponse':None}
     return JsonResponse(json)
 
-#works as expected
+#clean this up
 @csrf_exempt
 def getCompletedWorkouts(request):
     if request.method == 'GET':

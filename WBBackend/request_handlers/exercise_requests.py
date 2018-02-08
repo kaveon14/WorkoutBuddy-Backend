@@ -8,7 +8,7 @@ import WBBackend.management.commands.populate_db as db
 
 # IMAGES SHOULD BE LOADED FROM DIR
 #use post if sending userID or profileID
-
+@csrf_exempt
 def getDefaultExercises(request):#need to check the request
     if request.method == 'GET':
         ex_arr = []
@@ -33,7 +33,7 @@ def getCustomExercises(request):
         ex_arr = []
         for ex in ex_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.local_exercise_image.url}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.url}
             ex_arr.append(e)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)
@@ -54,7 +54,7 @@ def getAllExercises(request):
             ex_arr.append(e)
         for ex in customEx_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.local_exercise_image.url}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.url}
             ex_arr.append(e)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)
@@ -73,7 +73,7 @@ def createCustomExercise(request):# need to set image to the default
         custom_exercise.save()
         custom_exercise.exercise_name = exercise_name
         custom_exercise.exercise_description = exercise_description
-        custom_exercise.local_exercise_image = db.getDefaultImagePath()
+        custom_exercise.exercise_image = db.getDefaultImagePath()
         custom_exercise.save()
         user_profile.custom_exercises.add(custom_exercise)
         user_profile.save()
@@ -100,18 +100,17 @@ def updateCustomExercise(request):
     return JsonResponse(json)
 
 @csrf_exempt
-def updateCustomExerciseImage(request):#must recreate whole exercise
+def updateCustomExerciseImage(request):
     if request.method == 'POST':
-        print(request.FILES)
         if request.FILES != {}:
             file_name = request.GET['file_name']
             custom_exercise = CustomExercise.objects.get(id=request.GET['customExerciseId'])
-            custom_exercise.local_exercise_image = request.FILES[file_name]
+            custom_exercise.exercise_image = request.FILES[file_name]
             custom_exercise.save()
         else:
             file_path = request.POST['file_path']
             custom_exercise = CustomExercise.objects.get(id=request.POST['customExerciseId'])
-            custom_exercise.local_exercise_image = file_path
+            custom_exercise.exercise_image = file_path
             custom_exercise.save()
 
         json = {'error':False,'message':'Request successfully completed','RequestResponse':'Custom Exercise Image Changed!'}

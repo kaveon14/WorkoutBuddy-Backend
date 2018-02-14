@@ -5,13 +5,13 @@ from WBBackend.models import DefaultExercise,MainWorkout,SubWorkout,ExerciseGoal
 
 #need to change this slightly
 def getDefaultImagePath():
-    default_image_path = 'WBBackend/ExerciseImages/default_exercise_image.png'
+    default_image_path = 'WorkoutBuddy/ExerciseImages/default_exercise_image.png'
     return default_image_path
     
 def get_exercise_image_path( exercise_name):#check for both png and jpg
     image_png = None
     try:
-        image_png = open('WBBackend/ExerciseImages/'+exercise_name+'.png')
+        image_png = open('WorkoutBuddy/ExerciseImages/'+exercise_name+'.png')
     except FileNotFoundError:
         print('File Not Found!!')
     if image_png != None:
@@ -20,7 +20,7 @@ def get_exercise_image_path( exercise_name):#check for both png and jpg
 
     image_jpg = None
     try:
-        image_jpg = open('WBBackend/ExerciseImages/'+exercise_name+'.jpg')
+        image_jpg = open('WorkoutBuddy/ExerciseImages/'+exercise_name+'.jpg')
     except FileNotFoundError:
         print('File Not Found!!')
     if image_jpg != None:

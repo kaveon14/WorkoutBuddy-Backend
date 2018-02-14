@@ -21,8 +21,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 import AdminBackend.views as view
 
-
-
 urlpatterns = [
     url(r'android_login',view.android_login),
     url(r'^signup/$', core_views.signup, name='signup'),
@@ -30,5 +28,6 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'exercises/', include('WBBackend.urls')),
     url(r'^admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'testApi/',include('WBBackend.request_api.exercise_urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  
 

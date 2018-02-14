@@ -15,7 +15,7 @@ def getDefaultExercises(request):#need to check the request
         ex_list = DefaultExercise.objects.order_by('exercise_name')
         for ex in ex_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.url}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__()}
             ex_arr.append(e)
 
         json = {'error':False,'message':'Request successfully completed',
@@ -33,7 +33,7 @@ def getCustomExercises(request):
         ex_arr = []
         for ex in ex_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.url}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__()}
             ex_arr.append(e)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)
@@ -50,11 +50,11 @@ def getAllExercises(request):
         ex_arr = []
         for ex in defaultEx_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.url}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__()}
             ex_arr.append(e)
         for ex in customEx_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.url}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__()}
             ex_arr.append(e)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)

@@ -39,8 +39,12 @@ def getDefaultExercise(request):
 def getCustomExercise(request):
     if request.method == 'GET':
         ex = CustomExercise.objects.get(id=request.GET['id'])
-        e = {'id':ex.id,'exercise_name':ex.exercise_name,'exercise_description':ex.exercise_description,
-             'exercise_image':'media/'+ex.exercise_image.__str__()}
+        e = {'id':ex.id,'exercise_name':ex.exercise_name,'exercise_description':ex.exercise_description}
+        i = ex.exercise_image.__str__()
+        if i == 'static/WorkoutBuddy/ExerciseImages/default_exercise_image.png':
+            e['exercise_image'] = ex.exercise_image.__str__()
+        else:
+            e['exercise_image'] = 'media/'+i
         json = {'error':False,'message':'Request successfully completed','RequestResponse':e}
         return JsonResponse(json)
     json = {'error':True,'message':'The http request needs to be "GET" not "POST" ','RequestResponse':None}
@@ -64,6 +68,7 @@ def getCustomExercises(request):
 
 @csrf_exempt
 def getAllExercises(request):
+    print(request.GET)
     if request.method == 'POST':
         defaultEx_list =  DefaultExercise.objects.order_by('exercise_name')
         profileId = request.POST['profileId']
@@ -72,11 +77,13 @@ def getAllExercises(request):
         ex_arr = []
         for ex in defaultEx_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__()}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__(),
+                 'default_exercise':True}
             ex_arr.append(e)
         for ex in customEx_list:
             e = {'id':ex.id,'exercise_name':ex.exercise_name,
-                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__()}
+                 'exercise_description':ex.exercise_description,'exercise_image':ex.exercise_image.__str__(),
+                 'default_exercise':False}
             ex_arr.append(e)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)

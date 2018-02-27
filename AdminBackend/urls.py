@@ -21,13 +21,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 import AdminBackend.views as view
 
+from WBBackend.request_handlers import profile_requests
+from rest_framework_jwt.views import obtain_jwt_token
+
 urlpatterns = [
     url(r'android_login',view.android_login),
     url(r'^signup/$', core_views.signup, name='signup'),
-    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^login', profile_requests.log_user_in, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'exercises/', include('WBBackend.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'testApi/',include('WBBackend.request_api.exercise_urls')),
+    url(r'testExerciseApi/',include('WBBackend.request_api.exercise_urls')),
+    url(r'testWorkoutApi/',include('WBBackend.request_api.workout_urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  
 

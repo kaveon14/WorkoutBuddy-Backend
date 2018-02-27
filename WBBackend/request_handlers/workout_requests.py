@@ -8,11 +8,14 @@ def getMainWorkouts(request):
     if request.method == 'POST':
         profileId = request.POST['profileId']
         user_profile = Profile.objects.get(id=profileId)
-        mw_list = MainWorkout.objects.filter(user_profile=user_profile)
+       # mw_list = MainWorkout.objects.filter(user_profile=user_profile)
+        mw_list = MainWorkout.objects.get(id=1)
         mw_arr = []
-        for mw in mw_list:
-            w = {'id':mw.id,'main_workout_name':mw.main_workout_name}
-            mw_arr.append(w)
+        w = {'id':mw_list.id,'main_workout_name':mw_list.main_workout_name}
+        mw_arr.append(w)
+        #for mw in mw_list:
+         #   w = {'id':mw.id,'main_workout_name':mw.main_workout_name}
+        #    mw_arr.append(w)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':mw_arr}
         return JsonResponse(json)
     
@@ -47,9 +50,14 @@ def getSubWorkoutExercises(request):
             e = {'id':ex.id,'goal_sets':ex.goal_sets,'goal_reps':ex.goal_reps}
             if ex.default_exercise is None:
                 e['exercise_name'] = ex.custom_exercise.exercise_name
+                e['exercise_id'] =  ex.custom_exercise.id
+                e['default_exercise'] = False
             else:
                 e['exercise_name'] = ex.default_exercise.exercise_name
+                e['exercise_id'] =  ex.default_exercise.id
+                e['default_exercise'] = True
             ex_arr.append(e)
+
         json = {'error':False,'message':'Request successfully completed','RequestResponse':ex_arr}
         return JsonResponse(json)
 
@@ -136,8 +144,8 @@ def createSubWorkout(request):
                 ex = CustomExercise.objects.get(id=map['id'])
                 custom_ex_list.append(ex)                                
             else: 
-            ex = DefaultExercise.objects.get(id=map['id'])
-            default_ex_list.append(ex)
+                ex = DefaultExercise.objects.get(id=map['id'])
+                default_ex_list.append(ex)
 
         sub_workout.save()
         main_workout.sub_workouts.add(sub_workout)

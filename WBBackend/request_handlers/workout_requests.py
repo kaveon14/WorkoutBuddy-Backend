@@ -134,7 +134,7 @@ def createMainWorkout(request):
     return JsonResponse(json)
 
 @csrf_exempt
-def createSubWorkout(request):# seperate the exercise part, just create basic subworkout here
+def createSubWorkout(request):
     if request.method == 'POST':
         data = request.body.decode('utf-8')
         json_data = json_module.loads(data)
@@ -144,27 +144,9 @@ def createSubWorkout(request):# seperate the exercise part, just create basic su
         main_workout = MainWorkout.objects.get(id=json_data['mainWorkoutId'])
         sub_workout_name = json_data['sub_workout_name']
         sub_workout = SubWorkout(main_workout=main_workout,sub_workout_name=sub_workout_name)
-
-        '''
-        json_list = json_data['exercise_list']
-        default_ex_list = []
-        custom_ex_list = []
-        for map in json_list:
-            if map['custom_exercise'] is True:
-                ex = CustomExercise.objects.get(id=map['id'])
-                custom_ex_list.append(ex)                                
-            else: 
-                ex = DefaultExercise.objects.get(id=map['id'])
-                default_ex_list.append(ex)
-        '''
-
         sub_workout.save()
         main_workout.sub_workouts.add(sub_workout)
         
-        #sub_workout.default_exercises.add(*default_ex_list)
-        #sub_workout.custom_exercises.add(*custom_ex_list)
-
-        #sub_workout.save()
         sub_workout.user_profile = user_profile
         sub_workout.save()
         user_profile.custom_sub_workouts.add(sub_workout)
@@ -175,7 +157,7 @@ def createSubWorkout(request):# seperate the exercise part, just create basic su
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
-
+@csrf_exempt
 def setSubWorkoutExercises(request):
     if request.method == 'POST':
         data = request.body.decode('utf-8')
@@ -204,3 +186,35 @@ def setSubWorkoutExercises(request):
     
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
+
+@csrf_exempt
+def deleteMainWorkout(request):#also deletes subworkouts as expected
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        user_profile = Profile.objects.get(id=json_data['profileId'])
+        main_workout = MainWorkout.objects.get(id=json_data['id'])
+        main_workout.delete(keep_parents=False)
+        user_profile.remove(main_workout)
+        user_profile.save()
+        main_workout = None
+        json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
+        return JsonResponse(json)
+    
+    json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
+    return JsonResponse(json)
+
+@csrf_exempt
+def deleteSubWorkout(request):#also delete the exercise goals as expected
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        sub_workout = SubWorkout.objects.get(id=json_data['id'])
+        sub_workout.delete(keep_parents=False)      
+        sub_workout = None
+        json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
+        return JsonResponse(json)
+    
+    json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
+    return JsonResponse(json)
+        

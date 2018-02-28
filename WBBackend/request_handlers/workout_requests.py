@@ -1,21 +1,23 @@
 from WBBackend.models import MainWorkout, SubWorkout, Profile, ExerciseGoals,Workout,WorkoutExercise,Set,CustomExercise,DefaultExercise
 from django.http import JsonResponse
-import json
 from django.views.decorators.csrf import csrf_exempt
+import json as json_module
 #add function for completeing an workout
 @csrf_exempt
 def getMainWorkouts(request):
     if request.method == 'POST':
         profileId = request.POST['profileId']
         user_profile = Profile.objects.get(id=profileId)
-       # mw_list = MainWorkout.objects.filter(user_profile=user_profile)
-        mw_list = MainWorkout.objects.get(id=1)
+        mw_list = MainWorkout.objects.filter(user_profile=user_profile)
+
+        default_mw = MainWorkout.objects.get(id=1)
         mw_arr = []
-        w = {'id':mw_list.id,'main_workout_name':mw_list.main_workout_name}
+        w = {'id':default_mw.id,'main_workout_name':default_mw.main_workout_name}
         mw_arr.append(w)
-        #for mw in mw_list:
-         #   w = {'id':mw.id,'main_workout_name':mw.main_workout_name}
-        #    mw_arr.append(w)
+
+        for mw in mw_list:
+            w = {'id':mw.id,'main_workout_name':mw.main_workout_name}
+            mw_arr.append(w)
         json = {'error':False,'message':'Request successfully completed','RequestResponse':mw_arr}
         return JsonResponse(json)
     
@@ -39,7 +41,7 @@ def getSubWorkouts(request):
     return JsonResponse(json)
 
 @csrf_exempt
-def getSubWorkoutExercises(request):
+def getSubWorkoutExercises(request):#reps and sets are all the same with no ranges
     if request.method == 'GET':
         sw_id = request.GET['subWorkoutId']
         sw = SubWorkout.objects.get(id=sw_id)
@@ -112,9 +114,12 @@ def getCompletedWorkouts(request):
 @csrf_exempt#not right
 def createMainWorkout(request):
     if request.method == 'POST':
-        profile_id = request.POST['profileId']
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        
+        profile_id =  json_data['profileId']
         user_profile = Profile.objects.get(id=profile_id)
-        main_workout_name = request.POST['main_workout_name']
+        main_workout_name =  json_data['main_workout_name']
         main_workout = MainWorkout(main_workout_name=main_workout_name)
         main_workout.save()
         main_workout.user_profile = user_profile
@@ -122,21 +127,26 @@ def createMainWorkout(request):
         user_profile.custom_main_workouts.add(main_workout)
         user_profile.save()
         print(main_workout.main_workout_name)
-        json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
+        json = {'error':False,'message':'Request successfully completed','RequestResponse':{'id':main_workout.id}}
         return JsonResponse(json)
     
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
 @csrf_exempt
-def createSubWorkout(request):
+def createSubWorkout(request):# seperate the exercise part, just create basic subworkout here
     if request.method == 'POST':
-        profile_id = request.POST['profileId']
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        
+        profile_id = json_data['profileId']
         user_profile = Profile.objects.get(id=profile_id)
-        main_workout = MainWorkout.objects.get(id=request.POST['mainorkoutId'])
-        sub_workout_name = request.POST['sub_workout_name']
+        main_workout = MainWorkout.objects.get(id=json_data['mainWorkoutId'])
+        sub_workout_name = json_data['sub_workout_name']
         sub_workout = SubWorkout(main_workout=main_workout,sub_workout_name=sub_workout_name)
-        json_list = request.POST['exercise_list']
+
+        '''
+        json_list = json_data['exercise_list']
         default_ex_list = []
         custom_ex_list = []
         for map in json_list:
@@ -146,18 +156,51 @@ def createSubWorkout(request):
             else: 
                 ex = DefaultExercise.objects.get(id=map['id'])
                 default_ex_list.append(ex)
+        '''
 
         sub_workout.save()
         main_workout.sub_workouts.add(sub_workout)
-        sub_workout.default_exercises.add(*default_ex_list)
-        sub_workout.custom_exercises.add(*custom_ex_list)
-        sub_workout.save()
+        
+        #sub_workout.default_exercises.add(*default_ex_list)
+        #sub_workout.custom_exercises.add(*custom_ex_list)
+
+        #sub_workout.save()
         sub_workout.user_profile = user_profile
         sub_workout.save()
         user_profile.custom_sub_workouts.add(sub_workout)
-        json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
+        user_profile.save()
+        json = {'error':False,'message':'Request successfully completed','RequestResponse':{'id':sub_workout.id}}
         return JsonResponse(json)
     
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
+
+def setSubWorkoutExercises(request):
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+
+        sub_workout_id = json_data['subWorkoutId']
+        sub_workout = SubWorkout.objects.get(id=sub_workout_id)
+
+        json_list = json_data['exercise_list']
+        default_ex_list = []
+        custom_ex_list = []
+        for map in json_list:
+            if map['default_exercise'] is False:
+                ex = CustomExercise.objects.get(id=map['id'])
+                custom_ex_list.append(ex)                                
+            else: 
+                ex = DefaultExercise.objects.get(id=map['id'])
+                default_ex_list.append(ex)
+
+        sub_workout.default_exercises.add(*default_ex_list)
+        sub_workout.custom_exercises.add(*custom_ex_list)
+        sub_workout.save()
+
+        json = {'error':False,'message':'Request successfully completed','RequestResponse':None}
+        return JsonResponse(json)
+    
+    json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
+    return JsonResponse(json)

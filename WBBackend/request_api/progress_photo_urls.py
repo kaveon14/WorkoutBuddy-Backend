@@ -13,5 +13,8 @@ urlpatterns = [
 '''
 Things that need to be tested
 
+-- POST --
+#getProgressPhotos
+#addProgressPhotos
 
 '''

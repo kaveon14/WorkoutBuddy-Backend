@@ -2,11 +2,16 @@ from WBBackend.models import ProgressPhoto,Profile
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import arrow
+import json as json_module
 #will add more methods in the future for getting progrss photos
 
 @csrf_exempt
 def getProgressPhotos(request):
     if request.method == 'POST':
+        #print(request.body)
+        #data = request.body.decode('utf-8')
+        #json_data = json_module.loads(data)
+        
         profile_id = request.POST['profileId']
         profile = Profile.objects.get(id=profile_id)
         pp_list = ProgressPhoto.objects.filter(user_profile=profile).order_by('date_time')#-created_date
@@ -18,12 +23,13 @@ def getProgressPhotos(request):
         json = {'error':False,'message':'Request successfully completed',
                 'RequestResponse':pp_arr}
         return JsonResponse(json)
+    
     json = {'error':True,'message':'The http request needs to be "POST" not "GETT" ','RequestResponse':None}
     return JsonResponse(json)
 
 
 @csrf_exempt
-def addProgressPhoto(request):
+def addProgressPhoto(request):#arrow not working right, only give date no time
     if request.method == 'POST':
         if request.FILES != {}:
             user_profile = Profile.objects.get(id=request.GET['profileId'])

@@ -205,7 +205,7 @@ def deleteMainWorkout(request):#also deletes subworkouts as expected
     return JsonResponse(json)
 
 @csrf_exempt
-def deleteSubWorkout(request):#also delete the exercise goals as expected
+def deleteSubWorkout(request):
     if request.method == 'POST':
         data = request.body.decode('utf-8')
         json_data = json_module.loads(data)
@@ -217,4 +217,84 @@ def deleteSubWorkout(request):#also delete the exercise goals as expected
     
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
-        
+
+@csrf_exempt
+def updateMainWorkoutName(request):
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        main_workout = MainWorkout.objects.get(id=json_data['id'])
+        main_workout.main_workout_name = json_data['main_workout_name']
+        main_workout.save()
+        json = {'error': False, 'message': 'Request successfully completed', 'RequestResponse': None}
+        return JsonResponse(json)
+
+    json = {'error': True, 'message': 'The http request needs to be "POST" not "GET" ', 'RequestResponse': None}
+    return JsonResponse(json)
+
+@csrf_exempt
+def updateSubWorkoutName(request):
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        sub_workout = SubWorkout.objects.get(id=json_data['id'])
+        sub_workout.sub_workout_name = json_data['sub_workout_name']
+        sub_workout.save()
+        json = {'error': False, 'message': 'Request successfully completed', 'RequestResponse': None}
+        return JsonResponse(json)
+
+    json = {'error': True, 'message': 'The http request needs to be "POST" not "GET" ', 'RequestResponse': None}
+    return JsonResponse(json)
+
+@csrf_exempt
+def updateSubWorkoutExerciseGoals(request):
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        exercise_goals = json_data['exercise_goals']
+        for ex in exercise_goals:
+            e = ExerciseGoals.objects.get(id=ex.id)
+            e.goal_sets = ex.goal_sets
+            e.goal_reps = ex.goal_reps
+            e.save()
+
+        json = {'error': False, 'message': 'Request successfully completed', 'RequestResponse': None}
+        return JsonResponse(json)
+
+    json = {'error': True, 'message': 'The http request needs to be "POST" not "GET" ', 'RequestResponse': None}
+    return JsonResponse(json)
+
+@csrf_exempt
+def addSubWorkoutExerciseGoals(request):
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        sub_workout = SubWorkout.objects.get(id=json_data['id'])
+        ex_goal = ExerciseGoals(goal_sets=json_data['goal_sets'])
+        ex_goal.goal_reps = json_data['goal_reps']
+        ex_goal.save()
+        if json_data['default_exercise']:
+            ex = DefaultExercise.objects.get(id=json_data['exercise_id'])
+            ex._goal.default_exercise = ex
+        else:
+            ex = CustomExercise.objects.get(id=json_data['exercise_id'])
+            ex_goal.custom_exercise = ex
+        ex_goal.save()
+
+        json = {'error': False, 'message': 'Request successfully completed', 'RequestResponse': None}
+        return JsonResponse(json)
+
+    json = {'error': True, 'message': 'The http request needs to be "POST" not "GET" ', 'RequestResponse': None}
+    return JsonResponse(json)
+
+@csrf_exempt
+def deleteSubWorkoutExerciseGoals(request):
+    if request.method == 'POST':
+        ex_goal = ExerciseGoals.objects.get(id=request.POST['exercise_goal_id'])
+        ex_goal.delete()
+        ex_goal = None
+        json = {'error': False, 'message': 'Request successfully completed', 'RequestResponse': None}
+        return JsonResponse(json)
+
+    json = {'error': True, 'message': 'The http request needs to be "POST" not "GET" ', 'RequestResponse': None}
+    return JsonResponse(json)

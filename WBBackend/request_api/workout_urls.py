@@ -12,6 +12,11 @@ urlpatterns = [
     url(r'^createSubWorkout',workout_requests.createSubWorkout),
     url(r'^deleteMainWorkout',workout_requests.deleteMainWorkout),
     url(r'^deleteSubWorkout',workout_requests.deleteSubWorkout),
+    url(r'^updateMainWorkoutName',workout_requests.updateMainWorkoutName),
+    url(r'^updateSubWorkoutName',workout_requests.updateSubWorkoutName),
+    url(r'^updateSubWorkoutExerciseGoals',workout_requests.updateSubWorkoutExerciseGoals),
+    url(r'^addExerciseGoals',workout_requests.addSubWorkoutExerciseGoals),
+    url(r'^deleteExerciseGoals',workout_requests.deleteSubWorkoutExerciseGoals),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 '''
@@ -20,6 +25,6 @@ urlpatterns = [
 #getSubWorkouts
 #getSubWorkoutExercises
 #getCompletedWorkouts
-#createMainWorkout
+#createMainWorkoutE
 createSubWorkout# must be tested differently, possibly android app or use php to send post request
 '''

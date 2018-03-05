@@ -8,7 +8,7 @@ import json as json_module
 @csrf_exempt
 def getProgressPhotos(request):
     if request.method == 'POST':
-        #print(request.body)
+
         #data = request.body.decode('utf-8')
         #json_data = json_module.loads(data)
         
@@ -49,5 +49,21 @@ def addProgressPhoto(request):#arrow not working right, only give date no time
     json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
             
-            
+def deleteProgressPhoto(request):
+    if request.method == 'POST':
+        data = request.body.decode('utf-8')
+        json_data = json_module.loads(data)
+        progress_photo = ProgressPhoto.objects.get(id=json_data['id'])
+        user_profile = Profile.objects.get(id=json_data['profileId'])
+        user_profile.progress_photos.remove(progress_photo)
+        progress_photo.delete()
+        json = {'error': False, 'message': 'Request successfully completed', 'RequestResponse': None}
+        return JsonResponse(json)
+
+    json = {'error': True, 'message': 'The http request needs to be "POST" not "GET" ', 'RequestResponse': None}
+    return JsonResponse(json)
+
+
+
+
         

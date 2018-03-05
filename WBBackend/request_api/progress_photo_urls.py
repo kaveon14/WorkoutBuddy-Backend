@@ -5,8 +5,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    url(r'getProgressPhotos',progress_photo_requests.getProgressPhotos),
-    url(r'addProgressPhoto',progress_photo_requests.addProgressPhoto),
+    url(r'^getProgressPhotos',progress_photo_requests.getProgressPhotos),
+    url(r'^addProgressPhoto',progress_photo_requests.addProgressPhoto),
+    url(r'^deleteProgressPhoto',progress_photo_requests.deleteProgressPhoto),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

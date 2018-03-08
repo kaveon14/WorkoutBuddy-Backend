@@ -69,36 +69,26 @@ def getSubWorkoutExercises(request):#reps and sets are all the same with no rang
 #clean this up
 @csrf_exempt
 def getCompletedWorkouts(request):
-    if request.method == 'GET':
-        profileId = request['profile_id']
+    if request.method == 'POST':
+        profileId = request.POST['profileId']
         profile = Profile.objects.get(id=profileId)
         wk_list = Workout.objects.filter(user_profile=profile)
-        #for workout ex list need to do it in a loop
-        
-        # this is just a rought fucking draft, JESUS CHRIST!!!!
-        #now do the json shit
-        print(wk_list)
+
         we_arr = []
         for wk in wk_list:
             we_list = wk.completed_exercises.all()
-            print(we_list)
-            dict = {'id':wk.id,'date':wk.date,'subworkout_name':wk.subworkout_name}
-            ex_list = []
+            dict = {'id':wk.id,'date':wk.date,'main_workout_name':wk.main_workout_name,'sub_workout_name':wk.sub_workout_name}
             ex_arr = []
-            
+
             for we in we_list:
-                
                 e = {'id':we.id,'exercise_name':we.exercise_name}
                 set_list = we.completed_sets.all()
                 set_arr = []
-                print('yes1')
-
                 for set in set_list:
                     s = {'id':set.id,'set':set.set,'reps':set.reps,
                          'weight':set.weight,'unit':set.unit}
                     set_arr.append(s)
-                    print('yes2')
-                    
+
                 e['sets'] = set_arr
                 ex_arr.append(e)
 
@@ -107,7 +97,7 @@ def getCompletedWorkouts(request):
 
         json = {'error':False,'message':'Request successfully completed','RequestResponse':we_arr}
         return JsonResponse(json)
-    json = {'error':True,'message':'The http request needs to be "GET" not "POST" ','RequestResponse':None}
+    json = {'error':True,'message':'The http request needs to be "POST" not "GET" ','RequestResponse':None}
     return JsonResponse(json)
 
 #create sub workouts differently

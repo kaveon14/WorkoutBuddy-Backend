@@ -4,7 +4,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    # still in testing phase,
     url(r'^getDefaultExercises',exercise_requests.getDefaultExercises),
     url(r'^getDefaultExercise',exercise_requests.getDefaultExercise),
     url(r'^getCustomExercise',exercise_requests.getCustomExercise),
@@ -12,7 +11,5 @@ urlpatterns = [
     url(r'^getAllExercises',exercise_requests.getAllExercises),
     url(r'^createCustomExercise',exercise_requests.createCustomExercise),
     url(r'^updateCustomExercise',exercise_requests.updateCustomExercise),
-    url(r'setCustomExerciseImage',exercise_requests.setCustomExerciseImage),
-    url(r'^u',exercise_requests.updateCustomExerciseImage),
     url(r'^deleteCustomExercise',exercise_requests.deleteCustomExercise),
-]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
